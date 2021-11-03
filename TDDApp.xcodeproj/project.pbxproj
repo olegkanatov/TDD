@@ -16,6 +16,8 @@
 		19B47F6B2732A02300FB90F0 /* TDDAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F6A2732A02300FB90F0 /* TDDAppTests.swift */; };
 		19B47F752732A02400FB90F0 /* TDDAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F742732A02400FB90F0 /* TDDAppUITests.swift */; };
 		19B47F772732A02400FB90F0 /* TDDAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F762732A02400FB90F0 /* TDDAppUITestsLaunchTests.swift */; };
+		19B47F8D2732A77700FB90F0 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F8C2732A77700FB90F0 /* TaskTests.swift */; };
+		19B47F902732A80B00FB90F0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F8F2732A80B00FB90F0 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		19B47F702732A02400FB90F0 /* TDDAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B47F742732A02400FB90F0 /* TDDAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDAppUITests.swift; sourceTree = "<group>"; };
 		19B47F762732A02400FB90F0 /* TDDAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		19B47F8C2732A77700FB90F0 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		19B47F8F2732A80B00FB90F0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				19B47F6A2732A02300FB90F0 /* TDDAppTests.swift */,
+				19B47F8E2732A78100FB90F0 /* Model */,
 			);
 			path = TDDAppTests;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 		19B47F832732A03600FB90F0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				19B47F8F2732A80B00FB90F0 /* Task.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -157,6 +163,14 @@
 				19B47F612732A02300FB90F0 /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		19B47F8E2732A78100FB90F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19B47F8C2732A77700FB90F0 /* TaskTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B47F902732A80B00FB90F0 /* Task.swift in Sources */,
 				19B47F582732A02100FB90F0 /* ViewController.swift in Sources */,
 				19B47F542732A02100FB90F0 /* AppDelegate.swift in Sources */,
 				19B47F562732A02100FB90F0 /* SceneDelegate.swift in Sources */,
@@ -300,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B47F8D2732A77700FB90F0 /* TaskTests.swift in Sources */,
 				19B47F6B2732A02300FB90F0 /* TDDAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +421,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -473,7 +490,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 562JMNMA93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TDDApp/Info.plist;
+				INFOPLIST_FILE = "TDDApp/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -501,7 +518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 562JMNMA93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TDDApp/Info.plist;
+				INFOPLIST_FILE = "TDDApp/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
