@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		193315352732B05A00AEE4D6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193315342732B05A00AEE4D6 /* Location.swift */; };
 		193315372732B1CA00AEE4D6 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193315362732B1CA00AEE4D6 /* LocationTests.swift */; };
+		1933153A2732B75B00AEE4D6 /* TaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193315392732B75B00AEE4D6 /* TaskManagerTests.swift */; };
+		1933153D2732B7D700AEE4D6 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1933153C2732B7D700AEE4D6 /* TaskManager.swift */; };
 		19B47F542732A02100FB90F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F532732A02100FB90F0 /* AppDelegate.swift */; };
 		19B47F562732A02100FB90F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F552732A02100FB90F0 /* SceneDelegate.swift */; };
 		19B47F582732A02100FB90F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F572732A02100FB90F0 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		193315342732B05A00AEE4D6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		193315362732B1CA00AEE4D6 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		193315392732B75B00AEE4D6 /* TaskManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerTests.swift; sourceTree = "<group>"; };
+		1933153C2732B7D700AEE4D6 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		19B47F502732A02100FB90F0 /* TDDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B47F532732A02100FB90F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B47F552732A02100FB90F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193315382732B72200AEE4D6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				193315392732B75B00AEE4D6 /* TaskManagerTests.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1933153B2732B7C400AEE4D6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1933153C2732B7D700AEE4D6 /* TaskManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		19B47F472732A02100FB90F0 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +127,7 @@
 		19B47F522732A02100FB90F0 /* TDDApp */ = {
 			isa = PBXGroup;
 			children = (
+				1933153B2732B7C400AEE4D6 /* Manager */,
 				19B47F852732A04900FB90F0 /* Controller */,
 				19B47F842732A04200FB90F0 /* View */,
 				19B47F832732A03600FB90F0 /* Module */,
@@ -118,6 +139,7 @@
 		19B47F692732A02300FB90F0 /* TDDAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				193315382732B72200AEE4D6 /* Manager */,
 				19B47F6A2732A02300FB90F0 /* TDDAppTests.swift */,
 				19B47F8E2732A78100FB90F0 /* Model */,
 			);
@@ -310,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1933153D2732B7D700AEE4D6 /* TaskManager.swift in Sources */,
 				19B47F902732A80B00FB90F0 /* Task.swift in Sources */,
 				19B47F582732A02100FB90F0 /* ViewController.swift in Sources */,
 				193315352732B05A00AEE4D6 /* Location.swift in Sources */,
@@ -324,6 +347,7 @@
 			files = (
 				19B47F8D2732A77700FB90F0 /* TaskTests.swift in Sources */,
 				193315372732B1CA00AEE4D6 /* LocationTests.swift in Sources */,
+				1933153A2732B75B00AEE4D6 /* TaskManagerTests.swift in Sources */,
 				19B47F6B2732A02300FB90F0 /* TDDAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
