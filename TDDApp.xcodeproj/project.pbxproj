@@ -26,6 +26,7 @@
 		19B47F772732A02400FB90F0 /* TDDAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F762732A02400FB90F0 /* TDDAppUITestsLaunchTests.swift */; };
 		19B47F8D2732A77700FB90F0 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F8C2732A77700FB90F0 /* TaskTests.swift */; };
 		19B47F902732A80B00FB90F0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B47F8F2732A80B00FB90F0 /* Task.swift */; };
+		19CBD7BB27354D6F005DEE0D /* TaskCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD7BA27354D6F005DEE0D /* TaskCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		19B47F762732A02400FB90F0 /* TDDAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		19B47F8C2732A77700FB90F0 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 		19B47F8F2732A80B00FB90F0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		19CBD7BA27354D6F005DEE0D /* TaskCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		19B47F692732A02300FB90F0 /* TDDAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				19CBD7B927354D51005DEE0D /* View */,
 				190408C92733E83D005B3468 /* Controller */,
 				193315382732B72200AEE4D6 /* Manager */,
 				19B47F6A2732A02300FB90F0 /* TDDAppTests.swift */,
@@ -219,6 +222,14 @@
 				193315362732B1CA00AEE4D6 /* LocationTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		19CBD7B927354D51005DEE0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19CBD7BA27354D6F005DEE0D /* TaskCellTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 			files = (
 				19B47F8D2732A77700FB90F0 /* TaskTests.swift in Sources */,
 				193315372732B1CA00AEE4D6 /* LocationTests.swift in Sources */,
+				19CBD7BB27354D6F005DEE0D /* TaskCellTests.swift in Sources */,
 				190408CF2733F1B6005B3468 /* DataProviderTests.swift in Sources */,
 				1933153A2732B75B00AEE4D6 /* TaskManagerTests.swift in Sources */,
 				190408CB2733E85C005B3468 /* TaskListViewControllerTests.swift in Sources */,
