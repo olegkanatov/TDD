@@ -28,8 +28,6 @@ extension DataProvider: UITableViewDelegate {
         case .todo: return "Done"
         case .done: return "Undone"
         }
-        
-        return "Done"
     }
 }
 
