@@ -138,6 +138,81 @@
             </objects>
             <point key="canvasLocation" x="718.84057971014499" y="53.571428571428569"/>
         </scene>
+        <!--New Task View Controller-->
+        <scene sceneID="77N-HX-Uso">
+            <objects>
+                <viewController storyboardIdentifier="NewTaskViewController" id="HD0-Vo-yIG" customClass="NewTaskViewController" customModule="TDDApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="crK-vL-sPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tcd-cq-6PX">
+                                <rect key="frame" x="159" y="114" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPh-ga-FiB">
+                                <rect key="frame" x="159" y="156" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-4v-YYy">
+                                <rect key="frame" x="159" y="212" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZo-Bg-TnT">
+                                <rect key="frame" x="159" y="325" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di3-5c-LKx">
+                                <rect key="frame" x="20" y="739" width="145" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="save" destination="HD0-Vo-yIG" eventType="touchUpInside" id="CGI-eV-3ue"/>
+                                    <action selector="saveButton:" destination="HD0-Vo-yIG" eventType="touchUpInside" id="EPl-2C-jJZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sU-rj-fiv">
+                                <rect key="frame" x="249" y="739" width="145" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="HD0-Vo-yIG" eventType="touchUpInside" id="453-jD-ckC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-3f-gct">
+                                <rect key="frame" x="159" y="269" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LX1-92-Dcb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="adressTextField" destination="sPh-ga-FiB" id="JXr-5L-uDX"/>
+                        <outlet property="cancelButton" destination="6sU-rj-fiv" id="dI4-xE-vxw"/>
+                        <outlet property="dateTextField" destination="Lhk-4v-YYy" id="cHg-iY-ZOY"/>
+                        <outlet property="descriptionTextField" destination="4nd-3f-gct" id="BeS-TN-CNV"/>
+                        <outlet property="locationTextField" destination="tZo-Bg-TnT" id="hBF-4n-vPp"/>
+                        <outlet property="saveButton" destination="Di3-5c-LKx" id="cM8-bT-E4Y"/>
+                        <outlet property="titleTextField" destination="Tcd-cq-6PX" id="pgr-aQ-Vjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wny-HZ-8zA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431.8840579710145" y="53.571428571428569"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
