@@ -26,8 +26,8 @@ class APIClientTests: XCTestCase {
     
     func userLogin() {
         
-        let complitionHandler = {(token: String?, error: Error?) in }
-        sut.login(withName: "name", password: "%qwerty", complitionHandler: complitionHandler)
+        let completionHandler = {(token: String?, error: Error?) in }
+        sut.login(withName: "name", password: "%qwerty", completionHandler: completionHandler)
     }
     
     func testLoginUsesCorrectHost() {
@@ -76,6 +76,57 @@ class APIClientTests: XCTestCase {
         }
         waitForExpectations(timeout: 1) { _ in
             XCTAssertEqual(caughtToken, "tokenString")
+        }
+    }
+    
+    func testLoginInvalidJSONReturnsError() {
+        
+        mockURLSession = MockURLSession(data: Data(), urlResponce: nil, responceError: nil)
+        sut.urlSession = mockURLSession
+        
+        let errorExpectation = expectation(description: "Error expectation")
+        
+        var caughtError: Error?
+        sut.login(withName: "login", password: "password") { _, error in
+            caughtError = error
+            errorExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1) { _ in
+           XCTAssertNotNil(caughtError)
+        }
+    }
+    
+    func testLoginWhenDataIsNilReturnsError() {
+        
+        mockURLSession = MockURLSession(data: nil, urlResponce: nil, responceError: nil)
+        sut.urlSession = mockURLSession
+        
+        let errorExpectation = expectation(description: "Error expectation")
+        
+        var caughtError: Error?
+        sut.login(withName: "login", password: "password") { _, error in
+            caughtError = error
+            errorExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1) { _ in
+           XCTAssertNotNil(caughtError)
+        }
+    }
+    
+    func testLoginWhenResponseErrorReturnsError() {
+        let jsonDataStub = "{\"token\": \"tokenString\"}".data(using: .utf8)
+        let error = NSError(domain: "Server error", code: 404, userInfo: nil)
+        mockURLSession = MockURLSession(data: jsonDataStub, urlResponce: nil, responceError: error)
+        sut.urlSession = mockURLSession
+        let errorExpectation = expectation(description: "Error expectation")
+        
+        var caughtError: Error?
+        sut.login(withName: "login", password: "password") { _, error in
+            caughtError = error
+            errorExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 1) { _ in
+            XCTAssertNotNil(caughtError)
         }
     }
 
