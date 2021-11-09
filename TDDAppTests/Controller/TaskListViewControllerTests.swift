@@ -104,7 +104,7 @@ class TaskListViewControllerTests: XCTestCase {
         let task = Task(title: "Foo")
         sut.dataProvider.taskManager?.add(task: task)
         
-        expectation(forNotification: NSNotification.Name(rawValue: "DidSelectRownotification"), object: nil) { notification -> Bool in
+        expectation(forNotification: NSNotification.Name(rawValue: "DidSelectRow notification"), object: nil) { notification -> Bool in
             
             guard let taskFromNotification = notification.userInfo?["task"] as? Task else {
                 
@@ -118,6 +118,29 @@ class TaskListViewControllerTests: XCTestCase {
         tableView?.delegate?.tableView?(tableView!, didSelectRowAt: IndexPath(row: 0, section: 0))
         waitForExpectations(timeout: 1, handler: nil)
     }
+    
+    func testSecectedCellNotificationPushedDetailViewController() {
+        
+        let mockNavigationController = MockNavigationController(rootViewController: sut)
+        UIApplication.shared.keyWindow?.rootViewController = mockNavigationController
+        
+        sut.loadViewIfNeeded()
+        let task = Task(title: "Foo")
+        let task1 = Task(title: "Bar")
+        sut.dataProvider.taskManager?.add(task: task)
+        sut.dataProvider.taskManager?.add(task: task1)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DidSelectRow notification"), object: self, userInfo: ["task": task1])
+        
+        guard let detailViewController = mockNavigationController.pushedViewController as? DetailViewController else  {
+            XCTFail()
+            return
+        }
+        
+        detailViewController.loadViewIfNeeded()
+        XCTAssertNotNil(detailViewController.titleLabel)
+        XCTAssertTrue(detailViewController.task == task1)
+    }
 }
 
 extension TaskListViewControllerTests {
@@ -128,6 +151,19 @@ extension TaskListViewControllerTests {
         
         override func reloadData() {
             isReloaded = true
+        }
+    }
+}
+
+extension TaskListViewControllerTests {
+    
+    class MockNavigationController: UINavigationController {
+        var pushedViewController: UIViewController?
+        
+        override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+            
+            pushedViewController = viewController
+            super.pushViewController(viewController, animated: animated)
         }
     }
 }
