@@ -26,5 +26,11 @@ class TaskListViewController: UIViewController {
         let taskManager = TaskManager()
         dataProvider.taskManager = taskManager
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 }
 

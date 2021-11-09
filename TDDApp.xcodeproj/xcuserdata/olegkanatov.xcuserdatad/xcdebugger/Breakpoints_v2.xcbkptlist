@@ -30,8 +30,8 @@
             filePath = "TDDAppTests/Controller/NewTaskViewControllerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "NewTaskViewControllerTests"
             landmarkType = "21">
          </BreakpointContent>
