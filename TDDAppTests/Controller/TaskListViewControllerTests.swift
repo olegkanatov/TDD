@@ -83,7 +83,6 @@ class TaskListViewControllerTests: XCTestCase {
     
     func testSharesSameTaskManagerWithNewTaskViewController() {
 
-        
         let newTaskViewController = presentingNewTaskViewController()
         
         XCTAssertTrue(newTaskViewController.taskManager === sut.dataProvider.taskManager)
