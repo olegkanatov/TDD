@@ -141,6 +141,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		196CE5CF273A75AA006344FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19B47F6A2732A02300FB90F0 /* TDDAppTests.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1999A5AF27394685009DD252 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +196,7 @@
 				19CBD7B927354D51005DEE0D /* View */,
 				190408C92733E83D005B3468 /* Controller */,
 				193315382732B72200AEE4D6 /* Manager */,
-				19B47F6A2732A02300FB90F0 /* TDDAppTests.swift */,
+				196CE5CF273A75AA006344FD /* Supporting Files */,
 				19B47F8E2732A78100FB90F0 /* Model */,
 			);
 			path = TDDAppTests;
